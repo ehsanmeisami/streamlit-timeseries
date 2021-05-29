@@ -23,9 +23,9 @@ st.write("""
 Forecasting 6 weeks ahead by 'Product Number ID' and 'Point of Sales'""")
 st.write("---")
 
-project_path = pathlib.Path(__file__).parent.absolute()
+#project_path = pathlib.Path(__file__).parent.absolute()
 
-df = pd.read_csv(str(project_path) + '/correct_weekly_sorted.csv',index_col=0)
+df = pd.read_csv("correct_weekly_sorted.csv",index_col=0)
 df['date'] = pd.to_datetime(df['date'])
 prodName = sorted(list(df['ProductName_ID'].unique()))
 stores = sorted(list((df['Point-of-Sale_ID'].unique())))
