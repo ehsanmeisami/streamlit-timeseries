@@ -24,8 +24,8 @@ Forecasting 6 weeks ahead by 'Product Number ID' and 'Point of Sales'""")
 st.write("---")
 
 #project_path = pathlib.Path(__file__).parent.absolute()
-path = 'https://raw.githubusercontent.com/ehsanmeisami/streamlit-timeseries/master/'
-df = pd.read_csv(path + "correct_weekly_sorted.csv",index_col=0)
+#path = 'https://raw.githubusercontent.com/ehsanmeisami/streamlit-timeseries/master/'
+df = pd.read_csv("correct_weekly_sorted.csv")
 #df['date'] = pd.to_datetime(df['date'])
 st.write("Data shape",df.shape)
 # prodName = sorted(list(df['ProductName_ID'].unique()))
