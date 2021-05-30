@@ -28,24 +28,25 @@ path = 'https://raw.githubusercontent.com/ehsanmeisami/streamlit-timeseries/mast
 
 df = pd.read_csv(path + "correct_weekly_sorted.csv",index_col=0)
 #df['date'] = pd.to_datetime(df['date'])
+st.write(df.head())
 # prodName = sorted(list(df['ProductName_ID'].unique()))
 # stores = sorted(list((df['Point-of-Sale_ID'].unique())))
 
-# selecting product number
-select_productname = st.sidebar.selectbox("Select a Product Number ID", (prodName), 353)
-# selecting point of sales
-select_pointofsale = st.sidebar.selectbox("Select a Point of Sales", (stores), 281)
-# selecting model
-model_chosen = st.sidebar.selectbox("Choose a model",("SARIMA","XGBoost"))
-# selecting the weeks to predict
-#wks_to_predict = st.sidebar.slider("Weeks to predict",1,12,6)
+# # selecting product number
+# select_productname = st.sidebar.selectbox("Select a Product Number ID", (prodName), 353)
+# # selecting point of sales
+# select_pointofsale = st.sidebar.selectbox("Select a Point of Sales", (stores), 281)
+# # selecting model
+# model_chosen = st.sidebar.selectbox("Choose a model",("SARIMA","XGBoost"))
+# # selecting the weeks to predict
+# #wks_to_predict = st.sidebar.slider("Weeks to predict",1,12,6)
 
-st.write("Product Name Id chosen:", select_productname)
-st.write("Store Id chosen:", select_pointofsale)
-st.write("Model chosen:", model_chosen)
+# st.write("Product Name Id chosen:", select_productname)
+# st.write("Store Id chosen:", select_pointofsale)
+# st.write("Model chosen:", model_chosen)
 
-df_selected = df.loc[(df['ProductName_ID'] == select_productname) & (df['Point-of-Sale_ID'] == select_pointofsale)]
-df_selected = df_selected[['Sell-out units','date']].set_index('date')
+# df_selected = df.loc[(df['ProductName_ID'] == select_productname) & (df['Point-of-Sale_ID'] == select_pointofsale)]
+# df_selected = df_selected[['Sell-out units','date']].set_index('date')
 
 # # transform a time series dataset into a supervised learning dataset
 # def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
