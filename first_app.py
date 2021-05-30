@@ -28,7 +28,7 @@ path = 'https://raw.githubusercontent.com/ehsanmeisami/streamlit-timeseries/mast
 
 df = pd.read_csv(path + "correct_weekly_sorted.csv",index_col=0)
 #df['date'] = pd.to_datetime(df['date'])
-st.write(df.head())
+st.write(df)
 # prodName = sorted(list(df['ProductName_ID'].unique()))
 # stores = sorted(list((df['Point-of-Sale_ID'].unique())))
 
