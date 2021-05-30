@@ -26,7 +26,7 @@ st.write("---")
 #project_path = pathlib.Path(__file__).parent.absolute()
 path = 'https://raw.githubusercontent.com/ehsanmeisami/streamlit-timeseries/master/'
 
-df = pd.read_csv(path + "correct_weekly_sorted.csv",index_col=0, dtype={'date': 'datetime'})
+df = pd.read_csv(path + "correct_weekly_sorted.csv",index_col=0)
 #df['date'] = pd.to_datetime(df['date'])
 prodName = sorted(list(df['ProductName_ID'].unique()))
 stores = sorted(list((df['Point-of-Sale_ID'].unique())))
