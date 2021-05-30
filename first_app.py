@@ -28,8 +28,8 @@ path = 'https://raw.githubusercontent.com/ehsanmeisami/streamlit-timeseries/mast
 
 df = pd.read_csv(path + "correct_weekly_sorted.csv",index_col=0)
 #df['date'] = pd.to_datetime(df['date'])
-prodName = sorted(list(df['ProductName_ID'].unique()))
-stores = sorted(list((df['Point-of-Sale_ID'].unique())))
+# prodName = sorted(list(df['ProductName_ID'].unique()))
+# stores = sorted(list((df['Point-of-Sale_ID'].unique())))
 
 # selecting product number
 select_productname = st.sidebar.selectbox("Select a Product Number ID", (prodName), 353)
